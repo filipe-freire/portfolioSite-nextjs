@@ -10,7 +10,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href='/'>
           <a>
-            <h1 className={styles.logo}>{config.COMPANY_NAME}</h1>
+            <h1 className={`${styles.logo} clrTransition`}>{config.COMPANY_NAME}</h1>
           </a>
         </Link>
 

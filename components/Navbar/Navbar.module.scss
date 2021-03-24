@@ -3,6 +3,11 @@
   top: 0;
   background-color: #000;
 
+  .logo {
+    background-image: linear-gradient(to right, #59b2ee, #f34caf, #f0e43d);
+    margin-right: auto;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;

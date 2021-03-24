@@ -19,3 +19,17 @@ a {
   font-weight: 600;
   color: skyblue;
 }
+
+.clrTransition {
+  background: linear-gradient(to right, #f34caf, #f0e43d, #fdf9e4cc 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 375ms ease;
+
+  &:hover {
+    background-position: 0 100%;
+  }
+}
