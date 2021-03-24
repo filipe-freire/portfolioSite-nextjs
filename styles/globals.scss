@@ -1,3 +1,5 @@
+//! ****** RESET CSS PROPERTIES ******
+
 * {
   margin: 0;
   padding: 0;
@@ -10,16 +12,19 @@ html {
   color: #fff;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-.active {
-  font-weight: 600;
-  color: skyblue;
-}
+//! ****** CUSTOM STYLING ******
 
+//? Class to add a color gradient to the text
 .clrTransition {
   background: linear-gradient(to right, #f34caf, #f0e43d, #fdf9e4cc 40%);
   background-clip: text;
@@ -32,4 +37,10 @@ a {
   &:hover {
     background-position: 0 100%;
   }
+}
+
+//? Active Link Styling
+.active {
+  font-weight: 600;
+  background-image: linear-gradient(to left, #2994c5, #f34caf, #f0e43d);
 }

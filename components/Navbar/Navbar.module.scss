@@ -2,11 +2,8 @@
   position: sticky;
   top: 0;
   background-color: #000;
-
-  .logo {
-    background-image: linear-gradient(to right, #59b2ee, #f34caf, #f0e43d);
-    margin-right: auto;
-  }
+  font-size: 1.2rem;
+  box-shadow: #a4a7ff 0 -2px 5px 4px;
 
   .container {
     display: flex;
@@ -16,6 +13,12 @@
     max-height: 3em;
     margin: 0 auto;
     padding: 1em 2em;
+    color: #fdffdd;
+
+    .logo {
+      background-image: linear-gradient(to right, #59b2ee, #f34caf, #f0e43d);
+      margin-right: auto;
+    }
 
     .navLinksDesktop {
       display: none;
@@ -39,6 +42,7 @@
       }
 
       .navLink {
+        letter-spacing: 0.15ch;
         position: relative;
         transition: all 250ms ease-in-out;
 
@@ -46,7 +50,6 @@
           content: "";
           position: absolute;
           bottom: -5px;
-          // width: 60%;
           width: 0px;
           height: 2px;
           transition: all 250ms ease-in-out;
@@ -58,7 +61,7 @@
 
         &:hover {
           // color: yellow;
-          // font-size: 1.1rem;
+          // font-size: 1.3rem;
           &::after {
             width: 100%;
             opacity: 1;

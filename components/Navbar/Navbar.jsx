@@ -21,22 +21,22 @@ const Navbar = () => {
           <ul>
             <li>
               <ActiveLink href='/' activeClassName='active'>
-                <a className={styles.navLink}>Home</a>
+                <a className={`${styles.navLink} clrTransition`}>Home</a>
               </ActiveLink>
             </li>
             <li>
               <ActiveLink href='#' activeClassName='active'>
-                <a className={styles.navLink}>Blog</a>
+                <a className={`${styles.navLink} clrTransition`}>Blog</a>
               </ActiveLink>
             </li>
             <li>
               <ActiveLink href='#' activeClassName='active'>
-                <a className={styles.navLink}>About</a>
+                <a className={`${styles.navLink} clrTransition`}>About</a>
               </ActiveLink>
             </li>
             <li>
               <ActiveLink href='#' activeClassName='active'>
-                <a className={styles.navLink}>Contact</a>
+                <a className={`${styles.navLink} clrTransition`}>Contact</a>
               </ActiveLink>
             </li>
           </ul>
