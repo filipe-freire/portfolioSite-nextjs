@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ActiveLink from "../ActiveLink";
 import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
@@ -18,24 +19,24 @@ const Navbar = () => {
         <div className={styles.navLinksDesktop}>
           <ul>
             <li>
-              <Link href='/'>
+              <ActiveLink href='/' activeClassName='active'>
                 <a className={styles.navLink}>Home</a>
-              </Link>
+              </ActiveLink>
             </li>
             <li>
-              <Link href='#'>
+              <ActiveLink href='#' activeClassName='active'>
                 <a className={styles.navLink}>Blog</a>
-              </Link>
+              </ActiveLink>
             </li>
             <li>
-              <Link href='#'>
+              <ActiveLink href='#' activeClassName='active'>
                 <a className={styles.navLink}>About</a>
-              </Link>
+              </ActiveLink>
             </li>
             <li>
-              <Link href='#'>
+              <ActiveLink href='#' activeClassName='active'>
                 <a className={styles.navLink}>Contact</a>
-              </Link>
+              </ActiveLink>
             </li>
           </ul>
         </div>
