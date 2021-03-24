@@ -1,0 +1,31 @@
+.flexContainer {
+  display: flex;
+  align-items: center;
+
+  .btn {
+    display: block;
+    max-width: max-content;
+    padding: 0.8em 1.8em;
+    margin: 20px auto;
+    background-color: #03030a;
+    border: 1px solid #fff455;
+    border-radius: 4px;
+    color: #f8f0f0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.35ch;
+    font-weight: 600;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      background-color: #fff455;
+      color: #1e1e1e;
+      box-shadow: 0 2px 3px 1px #1e1e1e;
+      transform: scale(1.02);
+    }
+  }
+
+  .notFoundImage {
+    max-width: 400px;
+  }
+}
