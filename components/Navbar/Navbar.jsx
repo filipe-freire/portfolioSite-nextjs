@@ -1,9 +1,17 @@
+import { useState } from "react";
 import Link from "next/link";
 import ActiveLink from "../ActiveLink";
-import styles from "./Navbar.module.scss";
 import * as config from "../../config";
 
+import styles from "./Navbar.module.scss";
+
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
@@ -15,6 +23,25 @@ const Navbar = () => {
         </Link>
 
         {/* Hamburguer Menu */}
+        <div className={`${styles.hamburguer} ${isOpen && styles.hamburguerOpen}`}>
+          <div className={styles.navBtnContainer} onClick={handleClick}>
+            <div className={styles.navBtn}></div>
+          </div>
+          <div className={styles.navLinks}>
+            <Link href='/'>
+              <a onClick={handleClick}>Home</a>
+            </Link>
+            <Link href='/blog'>
+              <a onClick={handleClick}>Blog</a>
+            </Link>
+            <Link href='/about'>
+              <a onClick={handleClick}>About</a>
+            </Link>
+            <Link href='/contact'>
+              <a onClick={handleClick}>Contact</a>
+            </Link>
+          </div>
+        </div>
 
         {/* Desktop Links */}
         <div className={styles.navLinksDesktop}>
