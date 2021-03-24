@@ -1,9 +1,11 @@
+@use "../../styles/config" as *;
+
 .nav {
   position: sticky;
   top: 0;
-  background-color: #000;
+  background-color: $clr-bg-primary;
   font-size: 1.2rem;
-  box-shadow: #a4a7ff 0 -2px 5px 4px;
+  box-shadow: $clr-nav-shadow 0 -2px 5px 4px;
 
   .container {
     display: flex;
@@ -13,7 +15,7 @@
     max-height: 3em;
     margin: 0 auto;
     padding: 1em 2em;
-    color: #fdffdd;
+    color: $clr-nav-items;
 
     .logo {
       background-image: linear-gradient(to right, #59b2ee, #f34caf, #f0e43d);
@@ -54,7 +56,11 @@
           height: 2px;
           transition: all 250ms ease-in-out;
           left: 0;
-          background-image: linear-gradient(to right, #f34caf, #f0e43d);
+          background-image: linear-gradient(
+            to right,
+            $clr-navLinks-hover-start,
+            $clr-navLinks-hover-end
+          );
 
           opacity: 0;
         }
@@ -91,7 +97,7 @@
           &::before {
             display: block;
             position: relative;
-            background-color: #fdffdd;
+            background-color: $clr-nav-items;
             width: 1.7em;
             height: 3px;
             border-radius: 1em;
@@ -118,13 +124,13 @@
 
       .navLinks {
         position: fixed;
-        color: #fdffdd;
-        text-shadow: 2px 2px #424;
+        color: $clr-nav-items;
+        text-shadow: 2px 2px $clr-hamb-text-shadow;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(135deg, #7be6e6, #0925a5ef);
+        background: linear-gradient(135deg, $clr-hamb-gradient-start, $clr-hamb-gradient-end);
         top: 0;
         right: 0;
         width: 100%;
@@ -143,7 +149,7 @@
 
           &:hover {
             // color: rgb(252, 255, 86);
-            border-left: 2px solid #fff;
+            border-left: 2px solid $clr-hamb-linkBorder-hover;
             transform: scale(1.08);
           }
         }
