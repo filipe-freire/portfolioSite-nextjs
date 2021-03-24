@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ActiveLink from "../ActiveLink";
 import styles from "./Navbar.module.scss";
+import * as config from "../../config";
 
 const Navbar = () => {
   return (
@@ -9,7 +10,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href='/'>
           <a>
-            <h1 className={styles.logo}>Filipe Freire</h1>
+            <h1 className={styles.logo}>{config.COMPANY_NAME}</h1>
           </a>
         </Link>
 
