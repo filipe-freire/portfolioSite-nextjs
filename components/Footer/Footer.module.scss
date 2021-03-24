@@ -1,9 +1,11 @@
+@use "../../styles/config" as *;
+
 .footer {
   text-align: center;
   padding: 1em 2em;
-  background-color: #000;
+  background-color: $clr-bg-primary;
   letter-spacing: 0.2ch;
-  color: #fff;
+  color: $clr-nav-items;
 
   span {
     font-weight: 700;
