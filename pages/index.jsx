@@ -1,5 +1,4 @@
 import HeadComp from "../components/HeadComp";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Button from "../components/Button/Button";
 
@@ -40,9 +39,8 @@ export default function Home() {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum veniam
           necessitatibus rem nemo cupiditate quidem.
         </p>
-        <Link href="/contact">
-          <Button text="get in touch!" />
-        </Link>
+
+        <Button href="/contact" text="get in touch!" />
       </motion.div>
     </>
   );

@@ -3,6 +3,7 @@
 .nav {
   position: sticky;
   top: 0;
+  z-index: 1;
   background-color: $clr-bg-primary;
   font-size: 1.2rem;
   box-shadow: $clr-nav-shadow 0 -2px 5px 4px;
@@ -12,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     max-width: 1000px;
-    max-height: 3em;
+    max-height: 3.5rem;
     margin: 0 auto;
     padding: 1em 2em;
     color: $clr-nav-items;
@@ -20,6 +21,9 @@
     .logo {
       background-image: linear-gradient(to right, #59b2ee, #f34caf, #f0e43d);
       margin-right: auto;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.08ch;
     }
 
     .navLinksDesktop {
@@ -130,7 +134,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(135deg, $clr-hamb-gradient-start, $clr-hamb-gradient-end);
+        background: linear-gradient(
+          135deg,
+          $clr-hamb-gradient-start,
+          $clr-hamb-gradient-end
+        );
         top: 0;
         right: 0;
         width: 100%;
@@ -141,7 +149,8 @@
         letter-spacing: 0.2ch;
         transform: translateX(100%);
         opacity: 0;
-        transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms ease-in-out;
+        transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1),
+          opacity 250ms ease-in-out;
 
         & > a {
           padding: 0.6em;

@@ -1,9 +1,12 @@
 import styles from "./Button.module.scss";
+import Link from "next/link";
 
-const Button = ({ text }) => {
+const Button = ({ href, text }) => {
   return (
     <>
-      <a className={styles.btn}>{text}</a>
+      <Link href={href}>
+        <a className={styles.btn}>{text}</a>
+      </Link>
     </>
   );
 };

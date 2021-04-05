@@ -16,28 +16,30 @@ const Navbar = () => {
     <nav className={styles.nav}>
       <div className={styles.container}>
         {/* Logo */}
-        <Link href='/'>
-          <a>
-            <h1 className={`${styles.logo} clrTransition`}>{config.COMPANY_NAME}</h1>
+        <Link href="/">
+          <a className={`${styles.logo} clrTransition`}>
+            {config.COMPANY_NAME}
           </a>
         </Link>
 
         {/* Hamburguer Menu */}
-        <div className={`${styles.hamburguer} ${isOpen && styles.hamburguerOpen}`}>
+        <div
+          className={`${styles.hamburguer} ${isOpen && styles.hamburguerOpen}`}
+        >
           <div className={styles.navBtnContainer} onClick={handleClick}>
             <div className={styles.navBtn}></div>
           </div>
           <div className={styles.navLinks}>
-            <Link href='/'>
+            <Link href="/">
               <a onClick={handleClick}>Home</a>
             </Link>
-            <Link href='/blog'>
+            <Link href="/blog">
               <a onClick={handleClick}>Blog</a>
             </Link>
-            <Link href='/about'>
+            <Link href="/about">
               <a onClick={handleClick}>About</a>
             </Link>
-            <Link href='/contact'>
+            <Link href="/contact">
               <a onClick={handleClick}>Contact</a>
             </Link>
           </div>
@@ -47,22 +49,22 @@ const Navbar = () => {
         <div className={styles.navLinksDesktop}>
           <ul>
             <li>
-              <ActiveLink href='/' activeClassName='active'>
+              <ActiveLink href="/" activeClassName="active">
                 <a className={`${styles.navLink} clrTransition`}>Home</a>
               </ActiveLink>
             </li>
             <li>
-              <ActiveLink href='#' activeClassName='active'>
+              <ActiveLink href="#" activeClassName="active">
                 <a className={`${styles.navLink} clrTransition`}>Blog</a>
               </ActiveLink>
             </li>
             <li>
-              <ActiveLink href='#' activeClassName='active'>
+              <ActiveLink href="#" activeClassName="active">
                 <a className={`${styles.navLink} clrTransition`}>About</a>
               </ActiveLink>
             </li>
             <li>
-              <ActiveLink href='#' activeClassName='active'>
+              <ActiveLink href="#" activeClassName="active">
                 <a className={`${styles.navLink} clrTransition`}>Contact</a>
               </ActiveLink>
             </li>
