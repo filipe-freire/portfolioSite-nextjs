@@ -54,17 +54,17 @@ const Navbar = () => {
               </ActiveLink>
             </li>
             <li>
-              <ActiveLink href="#" activeClassName="active">
-                <a className={`${styles.navLink} clrTransition`}>Blog</a>
+              <ActiveLink href="/projects" activeClassName="active">
+                <a className={`${styles.navLink} clrTransition`}>Projects</a>
               </ActiveLink>
             </li>
             <li>
-              <ActiveLink href="#" activeClassName="active">
+              <ActiveLink href="/about" activeClassName="active">
                 <a className={`${styles.navLink} clrTransition`}>About</a>
               </ActiveLink>
             </li>
             <li>
-              <ActiveLink href="#" activeClassName="active">
+              <ActiveLink href="/contact" activeClassName="active">
                 <a className={`${styles.navLink} clrTransition`}>Contact</a>
               </ActiveLink>
             </li>

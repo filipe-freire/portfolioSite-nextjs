@@ -79,7 +79,7 @@
         }
       }
 
-      @media (min-width: 610px) {
+      @media (min-width: 710px) {
         display: block !important;
       }
     }
@@ -157,8 +157,8 @@
           transition: all 0.1s ease-in-out;
 
           &:hover {
-            // color: rgb(252, 255, 86);
-            border-left: 2px solid $clr-hamb-linkBorder-hover;
+            color: $clr-nav-items--hover;
+            border-left: 2px solid $clr-hamb-linkBorder--hover;
             transform: scale(1.08);
           }
         }
@@ -168,7 +168,7 @@
         }
       }
 
-      @media (min-width: 610px) {
+      @media (min-width: 710px) {
         display: none;
       }
     }

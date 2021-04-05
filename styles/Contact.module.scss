@@ -1,0 +1,47 @@
+.contactLayout {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 350px;
+
+  .title {
+    margin: 0.5em auto 1rem;
+    text-align: center;
+  }
+
+  .paragraph {
+    margin: 2rem 0;
+  }
+
+  .socialList {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1em;
+
+    .socialListItemTwitter {
+      color: #88d1ff;
+      &:hover {
+        color: #1da1f2;
+      }
+    }
+    .socialListItemGithub {
+      color: #fad464de;
+      &:hover {
+        color: #f3ba1e;
+      }
+    }
+    .socialListItemInstagram {
+      color: #df93b2;
+      &:hover {
+        color: #c33670;
+      }
+    }
+    .socialListItemLinkedIn {
+      color: #51a8ff;
+      &:hover {
+        color: #3386da;
+      }
+    }
+  }
+}
