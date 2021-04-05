@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  box-shadow: 0 0 0 7px #000, 0 0 0 9px #f7ef7b;
+}
+
 html {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -45,7 +49,8 @@ ul {
   background-position: 100%;
   transition: background-position 375ms ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-position: 0 100%;
   }
 }

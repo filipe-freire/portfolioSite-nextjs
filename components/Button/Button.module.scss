@@ -14,7 +14,8 @@
   transition: all 250ms ease-in-out;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #ffdc5d;
     color: #1e1e1e;
     box-shadow: 0 2px 3px 1px #00000081;
