@@ -8,6 +8,13 @@
   font-size: 1.1rem;
   box-shadow: $clr-nav-shadow 0 -2px 5px 4px;
 
+  /* TRANSPARENT NAV - Layout calc needs reajustment!
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  margin: 0 auto;
+  */
+
   .container {
     display: flex;
     justify-content: space-between;
