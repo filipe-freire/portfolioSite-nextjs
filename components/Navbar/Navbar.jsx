@@ -29,19 +29,21 @@ const Navbar = () => {
           <div className={styles.navBtnContainer} onClick={handleClick}>
             <div className={styles.navBtn}></div>
           </div>
-          <div className={styles.navLinks}>
-            <Link href="/">
-              <a onClick={handleClick}>Home</a>
-            </Link>
-            <Link href="/projects">
-              <a onClick={handleClick}>Projects</a>
-            </Link>
-            <Link href="/about">
-              <a onClick={handleClick}>About</a>
-            </Link>
-            <Link href="/contact">
-              <a onClick={handleClick}>Contact</a>
-            </Link>
+          <div className={styles.glassBg}>
+            <div className={styles.navLinks}>
+              <Link href="/">
+                <a onClick={handleClick}>Home</a>
+              </Link>
+              <Link href="/projects">
+                <a onClick={handleClick}>Projects</a>
+              </Link>
+              <Link href="/about">
+                <a onClick={handleClick}>About</a>
+              </Link>
+              <Link href="/contact">
+                <a onClick={handleClick}>Contact</a>
+              </Link>
+            </div>
           </div>
         </div>
 
