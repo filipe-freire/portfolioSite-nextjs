@@ -38,11 +38,11 @@ const projects = () => {
             I'm usually active in the following social media platforms ⬇️
           </p> */}
         </div>
-        <div>
+        <div className={styles.projectCard}>
           <div>
             <div>
-              <h1>JavaScripting, The Game</h1>
-              <p>
+              <h1 className={styles.projectTitle}>JavaScripting, The Game</h1>
+              <p className={styles.projectInfo}>
                 Built using JavaScript Object Oriented Programming architecture
                 and HTML canvas.
               </p>
@@ -52,11 +52,11 @@ const projects = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className={styles.projectCard}>
           <div>
             <div>
-              <h1>BandTracker</h1>
-              <p>
+              <h1 className={styles.projectTitle}>BandTracker</h1>
+              <p className={styles.projectInfo}>
                 Allows the user to search for his favorite bands/artists and
                 check whether they're performing and where. Built using NodeJS,
                 ExpressJS, Handlebars and API integrations.
@@ -67,11 +67,11 @@ const projects = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className={styles.projectCard}>
           <div>
             <div>
-              <h1>Vanilla Jobs</h1>
-              <p>
+              <h1 className={styles.projectTitle}>Vanilla Jobs</h1>
+              <p className={styles.projectInfo}>
                 A Web Develompent job search single page application (SPA) using
                 React and REST API. Built mobile first using SCSS.
               </p>
