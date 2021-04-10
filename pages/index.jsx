@@ -58,8 +58,7 @@ export default function Home() {
             My name is <span className={styles.accent}>Filipe</span>, <br />
             I'm a<span className={styles.accent}> Web Developer!</span>
           </p>
-          <p></p>
-          <p>Welcome to my spot in the Internet!</p>
+          {/* <p>Welcome to my spot in the Internet!</p> */}
         </motion.div>
       </motion.div>
       {/* <div className={styles.servicesSection}> */}
@@ -68,39 +67,59 @@ export default function Home() {
         <div className={styles.flexContainer}>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>Responsive Web Design</h3>
-            Implementing web designs which render well on multiple devices and screen sizes,
-            assuring its quality no matter where it's viewed. <br />
-            <br />
-            Did you know 50% of worldwide internet usage takes place on mobile devices?
-            <sup className='reference'>
-              <a
-                href='https://www.thinkwithgoogle.com/intl/en-154/marketing-strategies/app-and-mobile/mobile-world/'
-                rel='noopener'
-              >
-                [1]
-              </a>
-            </sup>
+            <p>
+              Implementing web designs which render well on
+              <span className='bold'> multiple devices </span>and screen sizes, assuring their
+              quality <span className='bold'>no matter where they're viewed.</span> <br />
+              <br />
+              Did you know <span className='bold'>50% of worldwide internet</span> usage takes place
+              on <span className='bold'>mobile devices</span>?
+              <sup className='reference'>
+                <a
+                  href='https://www.thinkwithgoogle.com/intl/en-154/marketing-strategies/app-and-mobile/mobile-world/'
+                  rel='noopener'
+                >
+                  [1]
+                </a>
+              </sup>
+            </p>
           </div>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>Quality Front-End & Backend code</h3>
-            Enabling growth by writing quality Front-End & Backend code. <br />
+            <p>
+              Managing the prospect of increased demand is no easy task.
+              <br />
+              <br />
+              <span className='bold'>Enforcing best practices </span>
+              regarding data structures, <span className='bold'>code readability</span> and the use
+              of <span className='bold'>relevant frameworks</span> prevents code debt in the long
+              run.
+            </p>
             <br />
-            Let's face it, as much as we may love pasta, nobody likes spaghetti code!
+            <p>
+              Let's face it, as much as we may love pasta,{" "}
+              <span className='bold'>
+                nobody likes{" "}
+                <a
+                  className={styles.link}
+                  href='https://en.wikipedia.org/wiki/Spaghetti_code'
+                  rel='noopener'
+                >
+                  spaghetti code
+                </a>
+              </span>
+              !
+            </p>
             <br />
             <br />
           </div>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>Continuous learning and growth</h3>
-            Managing the prospect of increased demand is no easy task, but enforcing best practices
-            regarding data architecture, code readability and the use of relevant tech/frameworks
-            prevents code dept in the long run. <br />
-            <br />
-            Keeping up with the latest standards and techniques is a must! <br />
+            <p>Keeping up with the latest standards and techniques is a must!</p> <br />
             <br />
           </div>
         </div>
       </div>
-      {/* <h2 className={styles.subTitle}>Hobbies</h2> */}
 
       <p className={styles.text}>
         Thank you for visiting! <br />
