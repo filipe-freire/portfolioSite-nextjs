@@ -1,6 +1,6 @@
 import styles from "../styles/Contact.module.scss";
 import HeadComp from "../components/HeadComp";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -13,24 +13,24 @@ const Contact = () => {
           crossorigin="anonymous"
         />
       </HeadComp>
-      <div
+      <motion.div
         className={styles.contactLayout}
-        // initial="hidden"
-        // animate="visible"
-        // exit={{ opacity: 0 }}
-        // variants={{
-        //   hidden: {
-        //     scale: 0.8,
-        //     opacity: 0,
-        //   },
-        //   visible: {
-        //     scale: 1,
-        //     opacity: 1,
-        //     transition: {
-        //       delay: 0.2,
-        //     },
-        //   },
-        // }}
+        initial="hidden"
+        animate="visible"
+        exit={{ opacity: 0 }}
+        variants={{
+          hidden: {
+            scale: 0.8,
+            opacity: 0,
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: 0.2,
+            },
+          },
+        }}
       >
         <div className={styles.flexContainer}>
           <div className={styles.links}>
@@ -53,52 +53,52 @@ const Contact = () => {
             </p>
             <ul className={styles.socialList}>
               <li>
-                <a
+                <motion.a
                   className={styles.socialListItemTwitter}
-                  // animate={{ scale: 2.8 }}
-                  // transition={{ duration: 0.5 }}
+                  animate={{ scale: 2.8 }}
+                  transition={{ duration: 0.5 }}
                   href="https://twitter.com/Filipe__Freire"
                   target="_blank"
                   rel="noopener"
                 >
                   <i className="fab fa-twitter fa-2x" />
-                </a>
+                </motion.a>
               </li>
               <li>
-                <a
-                  // animate={{ scale: 2.8 }}
-                  // transition={{ duration: 0.7 }}
+                <motion.a
+                  animate={{ scale: 2.8 }}
+                  transition={{ duration: 0.7 }}
                   className={styles.socialListItemGithub}
                   href="https://github.com/filipe-freire/"
                   target="_blank"
                   rel="noopener"
                 >
                   <i className="fab fa-github fa-2x" />
-                </a>
+                </motion.a>
               </li>
               <li>
-                <a
-                  // animate={{ scale: 2.8 }}
-                  // transition={{ duration: 0.9 }}
+                <motion.a
+                  animate={{ scale: 2.8 }}
+                  transition={{ duration: 0.9 }}
                   className={styles.socialListItemLinkedIn}
                   href="https://linkedin.com/in/filiperpfreire/"
                   target="_blank"
                   rel="noopener"
                 >
                   <i className="fab fa-linkedin fa-2x" />
-                </a>
+                </motion.a>
               </li>
               <li>
-                <a
-                  // animate={{ scale: 2.8 }}
-                  // transition={{ duration: 1.1 }}
+                <motion.a
+                  animate={{ scale: 2.8 }}
+                  transition={{ duration: 1.1 }}
                   className={styles.socialListItemInstagram}
                   href="https://www.instagram.com/filipe__freire/"
                   target="_blank"
                   rel="noopener"
                 >
                   <i className="fab fa-instagram fa-2x" />
-                </a>
+                </motion.a>
               </li>
             </ul>
           </div>
@@ -109,7 +109,7 @@ const Contact = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

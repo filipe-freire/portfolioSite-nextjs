@@ -1,5 +1,5 @@
 import HeadComp from "../components/HeadComp";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Button from "../components/Button/Button";
 
 import styles from "../styles/Homepage.module.scss";
@@ -9,45 +9,45 @@ export default function Home() {
     <>
       <HeadComp title="Home"></HeadComp>
       <h1 className="hidden">Filipe Freire - Homepage</h1>
-      <div
+      <motion.div
         className={styles.intro}
-        // initial="hidden"
-        // animate="visible"
-        // exit={{ opacity: 0 }}
-        // variants={{
-        //   hidden: {
-        //     scale: 0.8,
-        //     opacity: 0,
-        //   },
-        //   visible: {
-        //     scale: 1,
-        //     opacity: 1,
-        //     transition: {
-        //       delay: 0.2,
-        //     },
-        //   },
-        // }}
+        initial="hidden"
+        animate="visible"
+        exit={{ opacity: 0 }}
+        variants={{
+          hidden: {
+            scale: 0.8,
+            opacity: 0,
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: 0.2,
+            },
+          },
+        }}
       >
         <div className={styles.img}>
           <img src="/assets/img/illustrations/Work-from-home.png" alt="" />
         </div>
-        <div
+        <motion.div
           className={styles.container}
-          // initial="hidden"
-          // animate="visible"
-          // variants={{
-          //   hidden: {
-          //     scale: 0.8,
-          //     opacity: 0,
-          //   },
-          //   visible: {
-          //     scale: 1,
-          //     opacity: 1,
-          //     transition: {
-          //       delay: 0.2,
-          //     },
-          //   },
-          // }}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              scale: 0.8,
+              opacity: 0,
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 0.2,
+              },
+            },
+          }}
         >
           <p className={styles.introText}>
             Hey there!{" "}
@@ -59,25 +59,25 @@ export default function Home() {
             I'm a<span className={styles.accent}> Web Developer!</span>
           </p>
           {/* <p>Welcome to my spot in the Internet!</p> */}
-        </div>
-      </div>
-      <div
+        </motion.div>
+      </motion.div>
+      <motion.div
         className={styles.servicesContainer}
-        // initial="hidden"
-        // animate="visible"
-        // variants={{
-        //   hidden: {
-        //     scale: 0.8,
-        //     opacity: 0,
-        //   },
-        //   visible: {
-        //     scale: 1,
-        //     opacity: 1,
-        //     transition: {
-        //       delay: 0.2,
-        //     },
-        //   },
-        // }}
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            scale: 0.8,
+            opacity: 0,
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: 0.2,
+            },
+          },
+        }}
       >
         <h2 className={styles.subTitle}>Services</h2>
         <div className={styles.flexContainer}>
@@ -154,7 +154,7 @@ export default function Home() {
             <br />
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className={styles.contactCta}>
         <p className={styles.subtitleMobile}>Thank you for visiting!</p>
         <div className={styles.flexContainerCta}>

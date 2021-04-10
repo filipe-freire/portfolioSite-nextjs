@@ -1,5 +1,5 @@
 import HeadComp from "../components/HeadComp";
-// import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "../styles/Projects.module.scss";
 import { useState } from "react";
 
@@ -62,24 +62,24 @@ const Projects = () => {
   return (
     <>
       <HeadComp title="Contact"></HeadComp>
-      <div
+      <motion.div
         className={styles.container}
-        // initial="hidden"
-        // animate="visible"
-        // exit={{ opacity: 0 }}
-        // variants={{
-        //   hidden: {
-        //     scale: 0.8,
-        //     opacity: 0,
-        //   },
-        //   visible: {
-        //     scale: 1,
-        //     opacity: 1,
-        //     transition: {
-        //       delay: 0.2,
-        //     },
-        //   },
-        // }}
+        initial="hidden"
+        animate="visible"
+        exit={{ opacity: 0 }}
+        variants={{
+          hidden: {
+            scale: 0.8,
+            opacity: 0,
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: 0.2,
+            },
+          },
+        }}
       >
         <div className={styles.contactLayout}>
           <h1 className={styles.title}>
@@ -121,44 +121,44 @@ const Projects = () => {
             <img src="/assets/img/arrow.svg" alt="" />
           </button>
         </div>
-        {/* <AnimatePresence exitBeforeEnter> */}
-        <div
-          className={styles.projectCard}
-          // key={count}
-          // initial={{ x: cardPosition, opacity: 0 }}
-          // animate={{ x: 0, opacity: 1 }}
-          // exit={{
-          //   opacity: 0,
-          //   scale: 0.4,
-          //   transition: { duration: 0.2 },
-          // }}
-        >
-          <div>
+        <AnimatePresence exitBeforeEnter>
+          <motion.div
+            className={styles.projectCard}
+            key={count}
+            initial={{ x: cardPosition, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{
+              opacity: 0,
+              scale: 0.4,
+              transition: { duration: 0.2 },
+            }}
+          >
             <div>
-              <h1 className={styles.projectTitle}>
-                {projectsArr[count].title}
-              </h1>
-            </div>
-            <a
-              href={projectsArr[count].link}
-              className={styles.link}
-              target="_blank"
-              rel="noopener"
-            >
-              <div className={styles.projectImg}>
-                <img src={projectsArr[count].image} alt="" />
+              <div>
+                <h1 className={styles.projectTitle}>
+                  {projectsArr[count].title}
+                </h1>
               </div>
-            </a>
-            <h2 className={styles.summary}>Summary</h2>
-            {projectsArr[count].description.map((p, i) => (
-              <p key={i} className={styles.projectInfo}>
-                {p}
-              </p>
-            ))}
-          </div>
-        </div>
-        {/* </AnimatePresence> */}
-      </div>
+              <a
+                href={projectsArr[count].link}
+                className={styles.link}
+                target="_blank"
+                rel="noopener"
+              >
+                <div className={styles.projectImg}>
+                  <img src={projectsArr[count].image} alt="" />
+                </div>
+              </a>
+              <h2 className={styles.summary}>Summary</h2>
+              {projectsArr[count].description.map((p, i) => (
+                <p key={i} className={styles.projectInfo}>
+                  {p}
+                </p>
+              ))}
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </motion.div>
     </>
   );
 };
