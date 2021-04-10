@@ -54,6 +54,7 @@
 .projectCard {
   max-width: 80ch;
   margin: 0 auto;
+  // padding: 0 2rem;
 
   &.hidden {
     display: none;
@@ -64,11 +65,17 @@
     margin: 3rem 0 2.5rem;
     text-align: center;
   }
+
+  .summary {
+    padding: 0 1rem;
+  }
+
   .projectInfo {
     margin-top: 0.8rem;
     font-weight: 400;
     line-height: 3.5ch;
     text-align: justify;
+    padding: 0 1rem;
   }
 
   .link {
