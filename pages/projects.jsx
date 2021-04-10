@@ -2,6 +2,7 @@ import HeadComp from "../components/HeadComp";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "../styles/Projects.module.scss";
 import { useState } from "react";
+import Image from "next/image";
 
 const projectsArr = [
   {
@@ -94,8 +95,9 @@ const Projects = () => {
             id="btnLeft"
             onClick={(e) => handleClick(e)}
             className={styles.btn}
+            tabindex="0"
           >
-            <img src="/assets/img/arrow.svg" alt="" />
+            <Image src="/assets/img/arrow.svg" alt="" width={35} height={35} />
           </button>
           <div
             onClick={() => setCount(0)}
@@ -117,8 +119,9 @@ const Projects = () => {
             id="btnRight"
             onClick={(e) => handleClick(e)}
             className={`${styles.btn} ${styles.right}`}
+            tabindex="0"
           >
-            <img src="/assets/img/arrow.svg" alt="" />
+            <Image src="/assets/img/arrow.svg" alt="" width={35} height={35} />
           </button>
         </div>
         <AnimatePresence exitBeforeEnter>
