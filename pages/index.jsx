@@ -85,14 +85,12 @@ export default function Home() {
             <h3 className={styles.cardTitle}>Responsive Web Design</h3>
             <p>
               Implementing web designs which render well on
-              <span className="bold"> multiple devices </span>and screen sizes,
-              assuring their quality{" "}
-              <span className="bold">no matter where they're viewed.</span>{" "}
+              <strong> multiple devices </strong>and screen sizes, assuring
+              their quality <strong>no matter where they're viewed.</strong>{" "}
               <br />
               <br />
-              Did you know{" "}
-              <span className="bold">50% of worldwide internet</span> usage
-              takes place on <span className="bold">mobile devices</span>?
+              Did you know <strong>50% of worldwide internet</strong> usage
+              takes place on <strong>mobile devices</strong>?
               <sup className="reference">
                 <a
                   href="https://www.thinkwithgoogle.com/intl/en-154/marketing-strategies/app-and-mobile/mobile-world/"
@@ -111,16 +109,15 @@ export default function Home() {
               Managing the prospect of increased demand is no easy task.
               <br />
               <br />
-              <span className="bold">Enforcing best practices </span>
-              regarding data structures,{" "}
-              <span className="bold">code readability</span> and the use of{" "}
-              <span className="bold">relevant frameworks</span> prevents code
-              debt in the long run.
+              <strong>Enforcing best practices </strong>
+              regarding data structures, <strong>code readability</strong> and
+              the use of <strong>relevant frameworks</strong> prevents code debt
+              in the long run.
             </p>
             <br />
             <p>
               Let's face it, as much as we may love pasta,{" "}
-              <span className="bold">
+              <strong>
                 nobody likes{" "}
                 <a
                   className={styles.link}
@@ -130,7 +127,7 @@ export default function Home() {
                   spaghetti code
                 </a>
                 ! 🍝
-              </span>
+              </strong>
             </p>
             <br />
           </div>
