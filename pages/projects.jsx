@@ -135,7 +135,7 @@ const Projects = () => {
                 href={projectsArr[count].link}
                 className={styles.link}
                 target='_blank'
-                rel='noreferrer'
+                rel='noopener'
               >
                 <div className={styles.projectImg}>
                   <img src={projectsArr[count].image} alt='' />
