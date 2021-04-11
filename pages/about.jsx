@@ -42,7 +42,7 @@ const About = () => {
         <div className={styles.flexContainer}>
           <div className={styles.aboutContainer}>
             <Image
-              src="/assets/img/profile-pic.jpg"
+              src="/assets/img/profile-pic.webp"
               alt="Filipe Freire's profile"
               width={250}
               height={240}
