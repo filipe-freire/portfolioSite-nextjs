@@ -15,6 +15,7 @@ const Contact = () => {
         />
       </HeadComp>
       <motion.div
+        key="contact"
         className={styles.contactLayout}
         initial="hidden"
         animate="visible"

@@ -16,6 +16,7 @@ export default function Home() {
       </HeadComp>
       <h1 className="hidden">Filipe Freire - Homepage</h1>
       <motion.div
+        key="homepage"
         className={styles.intro}
         initial="hidden"
         animate="visible"

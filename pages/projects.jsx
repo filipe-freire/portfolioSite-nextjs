@@ -62,8 +62,9 @@ const Projects = () => {
 
   return (
     <>
-      <HeadComp title="Contact"></HeadComp>
+      <HeadComp title="Projects"></HeadComp>
       <motion.div
+        key="projects"
         className={styles.container}
         initial="hidden"
         animate="visible"

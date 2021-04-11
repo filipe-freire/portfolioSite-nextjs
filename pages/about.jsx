@@ -38,8 +38,9 @@ const About = () => {
 
   return (
     <>
-      <HeadComp title="Contact"></HeadComp>
+      <HeadComp title="About"></HeadComp>
       <motion.div
+        key="about"
         className={styles.container}
         initial="hidden"
         animate="visible"
