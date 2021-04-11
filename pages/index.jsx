@@ -37,7 +37,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.servicesContainer}>
-        <h2 className={styles.subTitle}>Services</h2>
+        <h2 className={styles.subTitle}>What I do</h2>
         <div className={styles.flexContainer}>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>Responsive Web Design</h3>

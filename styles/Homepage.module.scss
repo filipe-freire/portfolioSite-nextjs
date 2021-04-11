@@ -153,10 +153,12 @@
 
 .flexContainerCta {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 2rem 0;
+  margin: 2rem auto 0;
+  padding: 0 3rem;
+  max-width: 900px;
 
   @media (min-width: 620px) {
     flex-direction: row;
@@ -171,6 +173,15 @@
     max-width: 400px;
     margin-top: 3rem;
 
+    @media (min-width: 620px) {
+      margin-top: 0;
+    }
+
+    @media (min-width: 800px) {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+
     .subtitle {
       text-align: center;
       font-size: 1.5rem;
@@ -181,11 +192,12 @@
       @media (min-width: 620px) {
         display: block;
       }
+      @media (min-width: 800px) {
+        font-size: 1.9rem;
+        margin-bottom: 2rem;
+      }
     }
 
-    @media (min-width: 620px) {
-      margin-top: 0;
-    }
     .text {
       margin: 0;
     }

@@ -2,6 +2,7 @@ import HeadComp from "../components/HeadComp";
 import styles from "../styles/About.module.scss";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 const helloWorldInstances = [
   { src: "/assets/flags/pt.png", text: "Olá Mundo!" },
@@ -40,14 +41,28 @@ const About = () => {
       <HeadComp title="About"></HeadComp>
       <div className={styles.container}>
         <div className={styles.titleContainer}>
-          <img
-            className={styles.flagImg}
-            src={helloWorldInstances[count].src}
-            width="40"
-            height="30"
-            alt=""
-          />
-          <h1 className={styles.title}>{helloWorldInstances[count].text}</h1>
+          <AnimatePresence exitBeforeEnter>
+            <motion.img
+              className={styles.flagImg}
+              key={helloWorldInstances[count].src}
+              src={helloWorldInstances[count].src}
+              width="40"
+              height="30"
+              alt=""
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            />
+            <motion.h1
+              key={helloWorldInstances[count].text}
+              className={styles.title}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              {helloWorldInstances[count].text}
+            </motion.h1>
+          </AnimatePresence>
         </div>
 
         <div className={styles.flexContainer}>
