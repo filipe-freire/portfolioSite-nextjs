@@ -167,12 +167,6 @@ const Projects = () => {
                   ></source>
                   Your browser does not support the video tag.
                 </video>
-                {/* <Image
-                    src={projectsArr[count].image}
-                    alt=""
-                    width={495}
-                    height={295}
-                  /> */}
               </div>
 
               <h2 className={styles.summary}>Summary</h2>
