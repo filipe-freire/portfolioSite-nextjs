@@ -60,52 +60,44 @@ const Contact = () => {
             </p>
             <ul className={styles.socialList}>
               <li>
-                <motion.a
+                <a
                   className={styles.socialListItemTwitter}
-                  animate={{ scale: 2.8 }}
-                  transition={{ duration: 0.5 }}
                   href="https://twitter.com/Filipe__Freire"
                   target="_blank"
                   rel="noopener"
                 >
                   <i className="fab fa-twitter fa-2x" />
-                </motion.a>
+                </a>
               </li>
               <li>
-                <motion.a
-                  animate={{ scale: 2.8 }}
-                  transition={{ duration: 0.7 }}
+                <a
                   className={styles.socialListItemGithub}
                   href="https://github.com/filipe-freire/"
                   target="_blank"
                   rel="noopener"
                 >
                   <i className="fab fa-github fa-2x" />
-                </motion.a>
+                </a>
               </li>
               <li>
-                <motion.a
-                  animate={{ scale: 2.8 }}
-                  transition={{ duration: 0.9 }}
+                <a
                   className={styles.socialListItemLinkedIn}
                   href="https://linkedin.com/in/filiperpfreire/"
                   target="_blank"
                   rel="noopener"
                 >
                   <i className="fab fa-linkedin fa-2x" />
-                </motion.a>
+                </a>
               </li>
               <li>
-                <motion.a
-                  animate={{ scale: 2.8 }}
-                  transition={{ duration: 1.1 }}
+                <a
                   className={styles.socialListItemInstagram}
                   href="https://www.instagram.com/filipe__freire/"
                   target="_blank"
                   rel="noopener"
                 >
                   <i className="fab fa-instagram fa-2x" />
-                </motion.a>
+                </a>
               </li>
             </ul>
           </div>
