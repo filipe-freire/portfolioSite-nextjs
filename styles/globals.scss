@@ -10,6 +10,14 @@
   box-sizing: border-box;
 }
 
+.video {
+  display: block;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.507) 0px 20px 30px -10px;
+  margin: 0 auto;
+  border: 3px groove rgb(44, 140, 143);
+}
+
 .reference {
   color: rgb(95, 218, 255);
   font-weight: 600;

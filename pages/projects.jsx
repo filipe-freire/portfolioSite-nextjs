@@ -13,7 +13,7 @@ const projectsArr = [
       `- Winner of the "Most Creative Game" award! 🏆`,
     ],
     link: "https://javascriptin.netlify.app/",
-    image: "/assets/img/javaScriptin-gif-1.gif",
+    video: "/assets/videos/javaScriptin-demo.webm",
   },
   {
     title: "BandTracker",
@@ -23,7 +23,7 @@ const projectsArr = [
     ExpressJS, Handlebars and API integrations.`,
     ],
     link: "https://bandtrackerapp.herokuapp.com/",
-    image: "/assets/img/bandtracker-demo.gif",
+    video: "/assets/videos/bandtracker-demo.webm",
   },
   {
     title: "Vanilla Jobs",
@@ -32,7 +32,7 @@ const projectsArr = [
     React and REST API. Built mobile first using SCSS.`,
     ],
     link: "https://vanilla-jobs.netlify.app/",
-    image: "/assets/img/vanilla-jobs-demo.gif",
+    video: "/assets/videos/vanilla-jobs-demo.webm",
   },
   {
     title: "IronHack Class Timer",
@@ -40,7 +40,7 @@ const projectsArr = [
       `- A timer built with HTML | CSS | JavaScript in order to properly time breaks during Ironhack Remote Bootcamp's!`,
     ],
     link: "https://filipe-freire.github.io/ironhack-class-timer/",
-    image: "/assets/img/ih-timer.gif",
+    video: "/assets/videos/ih-timer.webm",
   },
 ];
 
@@ -138,26 +138,41 @@ const Projects = () => {
           >
             <div>
               <div>
-                <h1 className={styles.projectTitle}>
-                  {projectsArr[count].title}
-                </h1>
+                <a
+                  href={projectsArr[count].link}
+                  className={styles.link}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <h1 className={styles.projectTitle}>
+                    {projectsArr[count].title}
+                  </h1>
+                </a>
               </div>
-              <a
-                href={projectsArr[count].link}
-                className={styles.link}
-                target="_blank"
-                rel="noopener"
-              >
-                <div className={styles.projectImg}>
-                  <Image
+
+              <div className={styles.projectImg}>
+                <video
+                  autoPlay
+                  muted
+                  className="video"
+                  width="420"
+                  height="240"
+                  controls
+                >
+                  <source
+                    src={projectsArr[count].video}
+                    type="video/webm"
+                  ></source>
+                  Your browser does not support the video tag.
+                </video>
+                {/* <Image
                     src={projectsArr[count].image}
                     alt=""
                     width={495}
                     height={295}
-                  />
-                  {/* <img src={projectsArr[count].image} alt="" /> */}
-                </div>
-              </a>
+                  /> */}
+              </div>
+
               <h2 className={styles.summary}>Summary</h2>
               {projectsArr[count].description.map((p, i) => (
                 <p key={i} className={styles.projectInfo}>
