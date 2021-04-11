@@ -13,7 +13,7 @@ const projectsArr = [
       `- Winner of the "Most Creative Game" award! 🏆`,
     ],
     link: "https://javascriptin.netlify.app/",
-    image: "assets/img/javaScriptin-gif-1.gif",
+    image: "/assets/img/javaScriptin-gif-1.gif",
   },
   {
     title: "BandTracker",
@@ -23,7 +23,7 @@ const projectsArr = [
     ExpressJS, Handlebars and API integrations.`,
     ],
     link: "https://bandtrackerapp.herokuapp.com/",
-    image: "assets/img/bandtracker-demo.gif",
+    image: "/assets/img/bandtracker-demo.gif",
   },
   {
     title: "Vanilla Jobs",
@@ -32,7 +32,7 @@ const projectsArr = [
     React and REST API. Built mobile first using SCSS.`,
     ],
     link: "https://vanilla-jobs.netlify.app/",
-    image: "assets/img/vanilla-jobs-demo.gif",
+    image: "/assets/img/vanilla-jobs-demo.gif",
   },
   {
     title: "IronHack Class Timer",
@@ -40,7 +40,7 @@ const projectsArr = [
       `- A timer built with HTML | CSS | JavaScript in order to properly time breaks during Ironhack Remote Bootcamp's!`,
     ],
     link: "https://filipe-freire.github.io/ironhack-class-timer/",
-    image: "assets/img/ih-timer.gif",
+    image: "/assets/img/ih-timer.gif",
   },
 ];
 
@@ -149,7 +149,13 @@ const Projects = () => {
                 rel="noopener"
               >
                 <div className={styles.projectImg}>
-                  <img src={projectsArr[count].image} alt="" />
+                  <Image
+                    src={projectsArr[count].image}
+                    alt=""
+                    width={495}
+                    height={295}
+                  />
+                  {/* <img src={projectsArr[count].image} alt="" /> */}
                 </div>
               </a>
               <h2 className={styles.summary}>Summary</h2>

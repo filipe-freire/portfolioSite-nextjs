@@ -1,6 +1,7 @@
 import styles from "../styles/Contact.module.scss";
 import HeadComp from "../components/HeadComp";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Contact = () => {
   return (
@@ -36,10 +37,16 @@ const Contact = () => {
           <div className={styles.links}>
             <h1 className={styles.title}>Reach out! ✉️</h1>
             <div className={styles.messageImgMobile}>
-              <img
+              <Image
+                src="/assets/img/illustrations/Social-Media-Notifications.svg"
+                alt="Social Media"
+                width={400}
+                height={300}
+              />
+              {/* <img
                 src="/assets/img/illustrations/Social-Media-Notifications.svg"
                 alt=""
-              />
+              /> */}
             </div>
             <p className={styles.paragraph}>
               Whether to talk business, propose a collaboration or just speak

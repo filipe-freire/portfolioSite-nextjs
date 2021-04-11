@@ -1,6 +1,7 @@
 import HeadComp from "../components/HeadComp";
 import { motion } from "framer-motion";
 import Button from "../components/Button/Button";
+import Image from "next/image";
 
 import styles from "../styles/Homepage.module.scss";
 
@@ -29,7 +30,12 @@ export default function Home() {
         }}
       >
         <div className={styles.img}>
-          <img src="/assets/img/illustrations/Work-from-home.png" alt="" />
+          <Image
+            src="/assets/img/illustrations/Work-from-home.png"
+            alt=""
+            width={350}
+            height={240}
+          />
         </div>
         <motion.div
           className={styles.container}
@@ -159,7 +165,12 @@ export default function Home() {
         <p className={styles.subtitleMobile}>Thank you for visiting!</p>
         <div className={styles.flexContainerCta}>
           <div className={styles.img}>
-            <img src="/assets/img/illustrations/Messaging.svg" alt="" />
+            <Image
+              src="/assets/img/illustrations/Messaging.svg"
+              alt=""
+              width={300}
+              height={250}
+            />
           </div>
           <div className={styles.content}>
             <p className={styles.subtitle}>Thank you for visiting!</p>

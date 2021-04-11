@@ -23,19 +23,14 @@
     flex-direction: row;
   }
   .aboutContainer {
-    .profileImg {
-      margin: 0 auto 3rem;
-      max-width: 200px;
-      border-radius: 5px;
+    & > * {
       border: 2px groove hsl(178, 88%, 73%);
       box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
         rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
         rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-      // box-shadow: hsla(185, 87%, 56%, 0.4) -5px -5px,
-      //   hsla(185, 87%, 56%, 0.3) -10px -10px,
-      //   hsla(185, 87%, 56%, 0.2) -15px -15px,
-      //   hsla(185, 87%, 56%, 0.1) -20px -20px,
-      //   hsla(185, 87%, 56%, 0.05) -25px -25px;
+      border-radius: 5px;
+      margin: 0 auto 3rem;
+      max-width: 200px;
 
       @media (min-width: 800px) {
         margin-bottom: 0;
@@ -88,11 +83,11 @@
     max-width: 65px;
     max-height: 65px;
 
-    &:nth-child(5) {
+    &[alt="NodeJS"] {
       filter: brightness(1) invert(1) hue-rotate(265deg);
     }
 
-    &:last-child {
+    &[alt="NextJS"] {
       filter: brightness(0) invert(1);
     }
   }
