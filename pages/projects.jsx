@@ -96,6 +96,7 @@ const Projects = () => {
             onClick={(e) => handleClick(e)}
             className={styles.btn}
             tabindex="0"
+            aria-label="Previous Project"
           >
             <Image src="/assets/img/arrow.svg" alt="" width={35} height={35} />
           </button>
@@ -120,6 +121,7 @@ const Projects = () => {
             onClick={(e) => handleClick(e)}
             className={`${styles.btn} ${styles.right}`}
             tabindex="0"
+            aria-label="Next Project"
           >
             <Image src="/assets/img/arrow.svg" alt="" width={35} height={35} />
           </button>
