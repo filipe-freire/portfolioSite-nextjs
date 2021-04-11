@@ -73,26 +73,45 @@ export default function Home() {
           {/* <p>Welcome to my spot in the Internet!</p> */}
         </motion.div>
       </motion.div>
-      <motion.div
-        className={styles.servicesContainer}
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: {
-            scale: 0.8,
-            opacity: 0,
-          },
-          visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-              delay: 0.2,
+      <motion.div className={styles.servicesContainer}>
+        <motion.h2
+          className={styles.subTitle}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              scale: 0.8,
+              opacity: 0,
             },
-          },
-        }}
-      >
-        <h2 className={styles.subTitle}>Services</h2>
-        <div className={styles.flexContainer}>
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 0.2,
+              },
+            },
+          }}
+        >
+          Services
+        </motion.h2>
+        <motion.div
+          className={styles.flexContainer}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              scale: 0.8,
+              opacity: 0,
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 0.2,
+              },
+            },
+          }}
+        >
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>Responsive Web Design</h3>
             <p>
@@ -165,7 +184,7 @@ export default function Home() {
             <br />
             <br />
           </div>
-        </div>
+        </motion.div>
       </motion.div>
       <div className={styles.contactCta}>
         <p className={styles.subtitleMobile}>Thank you for visiting!</p>
