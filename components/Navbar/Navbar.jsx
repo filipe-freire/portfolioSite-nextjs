@@ -17,11 +17,15 @@ const Navbar = () => {
       <div className={styles.container}>
         {/* Logo */}
         <Link href="/">
-          <a className={`${styles.logo} clrTransition`}>{config.COMPANY_NAME}</a>
+          <a className={`${styles.logo} clrTransition`}>
+            {config.COMPANY_NAME}
+          </a>
         </Link>
 
         {/* Hamburguer Menu */}
-        <div className={`${styles.hamburguer} ${isOpen && styles.hamburguerOpen}`}>
+        <div
+          className={`${styles.hamburguer} ${isOpen && styles.hamburguerOpen}`}
+        >
           <div className={styles.navBtnContainer} onClick={handleClick}>
             <div className={styles.navBtn}></div>
           </div>
@@ -29,6 +33,9 @@ const Navbar = () => {
             <div className={styles.navLinks}>
               <Link href="/">
                 <a onClick={handleClick}>Home</a>
+              </Link>
+              <Link href="/blog">
+                <a onClick={handleClick}>Blog</a>
               </Link>
               <Link href="/projects">
                 <a onClick={handleClick}>Projects</a>
@@ -50,6 +57,13 @@ const Navbar = () => {
               <div className={styles.linkWrapper}>
                 <ActiveLink href="/" activeClassName="active">
                   <a className={`${styles.navLink} clrTransition`}>Home</a>
+                </ActiveLink>
+              </div>
+            </li>
+            <li>
+              <div className={styles.linkWrapper}>
+                <ActiveLink href="/blog" activeClassName="active">
+                  <a className={`${styles.navLink} clrTransition`}>Blog</a>
                 </ActiveLink>
               </div>
             </li>
