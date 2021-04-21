@@ -1,5 +1,4 @@
 import HeadComp from "../components/HeadComp";
-import { motion } from "framer-motion";
 import Button from "../components/Button/Button";
 import Image from "next/image";
 
@@ -13,28 +12,21 @@ export default function Home() {
           name="Description"
           content="My portfolio page on web development. Here you'll find info about me, what I do and a couple of projects I have developed."
         ></meta>
+        <meta property="og:url" content="filipefreire.com" />
+        <meta property="og:type" content="Web Development" />
+        <meta property="og:title" content="Filipe Freire - Web Development" />
+        <meta name="twitter:card" content="summary" />
+        <meta
+          property="og:description"
+          content="Check what I've been up to these days! 👀"
+        />
+        <meta
+          property="og:image"
+          content="https://avatars.githubusercontent.com/u/45498579?v=4"
+        />
       </HeadComp>
       <h1 className="hidden">Filipe Freire - Homepage</h1>
-      <motion.div
-        key="homepage"
-        className={styles.intro}
-        initial="hidden"
-        animate="visible"
-        exit={{ opacity: 0 }}
-        variants={{
-          hidden: {
-            scale: 0.8,
-            opacity: 0,
-          },
-          visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-              delay: 0.2,
-            },
-          },
-        }}
-      >
+      <div className={styles.intro}>
         <div className={styles.img}>
           <Image
             src="/assets/img/illustrations/Work-from-home.png"
@@ -43,24 +35,7 @@ export default function Home() {
             height={240}
           />
         </div>
-        <motion.div
-          className={styles.container}
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {
-              scale: 0.8,
-              opacity: 0,
-            },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              transition: {
-                delay: 0.2,
-              },
-            },
-          }}
-        >
+        <div className={styles.container}>
           <p className={styles.introText}>
             Hey there!{" "}
             <span role="img" aria-label="">
@@ -71,47 +46,11 @@ export default function Home() {
             I'm a<span className={styles.accent}> Web Developer!</span>
           </p>
           {/* <p>Welcome to my spot in the Internet!</p> */}
-        </motion.div>
-      </motion.div>
-      <motion.div className={styles.servicesContainer}>
-        <motion.h2
-          className={styles.subTitle}
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {
-              scale: 0.8,
-              opacity: 0,
-            },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              transition: {
-                delay: 0.2,
-              },
-            },
-          }}
-        >
-          Services
-        </motion.h2>
-        <motion.div
-          className={styles.flexContainer}
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {
-              scale: 0.8,
-              opacity: 0,
-            },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              transition: {
-                delay: 0.2,
-              },
-            },
-          }}
-        >
+        </div>
+      </div>
+      <div className={styles.servicesContainer}>
+        <h2 className={styles.subTitle}>What I do</h2>
+        <div className={styles.flexContainer}>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>Responsive Web Design</h3>
             <p>
@@ -184,8 +123,8 @@ export default function Home() {
             <br />
             <br />
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
       <div className={styles.contactCta}>
         <p className={styles.subtitleMobile}>Thank you for visiting!</p>
         <div className={styles.flexContainerCta}>

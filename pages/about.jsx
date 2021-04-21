@@ -1,17 +1,16 @@
 import HeadComp from "../components/HeadComp";
-import { motion } from "framer-motion";
 import styles from "../styles/About.module.scss";
-import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 const helloWorldInstances = [
-  "🇵🇹 Olá Mundo!",
-  "🇬🇧 Hello World!",
-  "🇪🇸 Hola Mundo!",
-  "🇸🇪 Hej världen!",
-  "🇩🇪 Hallo Welt!",
-  "🇷🇺 Привет мир!",
+  { src: "/assets/flags/pt.png", text: "Olá Mundo!" },
+  { src: "/assets/flags/gb.png", text: "Hello World!" },
+  { src: "/assets/flags/es.png", text: "Hola Mundo!" },
+  { src: "/assets/flags/se.png", text: "Hej världen!" },
+  { src: "/assets/flags/de.png", text: "Hallo Welt!" },
+  { src: "/assets/flags/ru.png", text: "Привет мир!" }
 ];
 
 const tools = [
@@ -22,79 +21,71 @@ const tools = [
   { name: "NodeJS", imgSrc: "/assets/img/tools/nodejs.png" },
   { name: "MongoDB", imgSrc: "/assets/img/tools/mongodb.svg" },
   { name: "React", imgSrc: "/assets/img/tools/react.png" },
-  { name: "NextJS", imgSrc: "/assets/img/tools/Nextjs-logo.svg" },
+  { name: "NextJS", imgSrc: "/assets/img/tools/Nextjs-logo.svg" }
 ];
 
 const About = () => {
   const [count, setCount] = useState(0);
 
-  function changeLang() {
-    setTimeout(() => {
-      return count === helloWorldInstances.length - 1
-        ? setCount(0)
-        : setCount(count + 1);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      return count === helloWorldInstances.length - 1 ? setCount(0) : setCount(count + 1);
     }, 3000);
-  }
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [count]);
 
   return (
     <>
       <HeadComp title="About"></HeadComp>
-      <motion.div
-        key="about"
-        className={styles.container}
-        initial="hidden"
-        animate="visible"
-        exit={{ opacity: 0 }}
-        variants={{
-          hidden: {
-            scale: 0.8,
-            opacity: 0,
-          },
-          visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-              delay: 0.2,
-            },
-          },
-        }}
-      >
-        <AnimatePresence exitBeforeEnter>
-          <motion.h1
-            className={styles.title}
-            key={count}
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{
-              opacity: 0,
-              transition: { duration: 0.2 },
-            }}
-            onLoad={changeLang()}
-          >
-            {helloWorldInstances[count]}
-          </motion.h1>
-        </AnimatePresence>
+      <div className={styles.container}>
+        <div className={styles.titleContainer}>
+          <AnimatePresence exitBeforeEnter>
+            <motion.img
+              className={styles.flagImg}
+              key={helloWorldInstances[count].src}
+              src={helloWorldInstances[count].src}
+              width="40"
+              height="30"
+              alt=""
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            />
+            <motion.h1
+              key={helloWorldInstances[count].text}
+              className={styles.title}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              {helloWorldInstances[count].text}
+            </motion.h1>
+          </AnimatePresence>
+        </div>
+
         <div className={styles.flexContainer}>
           <div className={styles.aboutContainer}>
             <Image
-              src="/assets/img/profile-pic.jpg"
+              src="/assets/img/profile-pic.webp"
               alt="Filipe Freire's profile"
               width={250}
               height={240}
             />
           </div>
-          <motion.div className={styles.infoContainer}>
+          <div className={styles.infoContainer}>
             <p className={styles.paragraph}>
-              🙋🏻‍♂️ Hey, I'm Filipe, a Web Developer with a background in music &
-              nutrition, passionate about music, javascript, learning new things
-              and improving people's lives through technology.
+              🙋🏻‍♂️ Hey, I'm Filipe, a Web Developer with a background in music & nutrition, passionate
+              about music, javascript, learning new things and improving people's lives through
+              technology.
             </p>
             <br />
             <p className={styles.paragraph}>
-              👨‍💻 Transitioned into the field of Web Development due to its
-              fast-paced environment and immense learning opportunities.
+              👨‍💻 Transitioned into the field of Web Development due to its fast-paced environment
+              and immense learning opportunities.
             </p>
-          </motion.div>
+          </div>
         </div>
         <p className={styles.toolbelt}>🛠 Toolbelt:</p>
         <div className={styles.tools}>
@@ -109,7 +100,7 @@ const About = () => {
             />
           ))}
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };

@@ -4,10 +4,22 @@
   margin: 0 auto;
 }
 
-.title {
-  text-align: center;
-  margin: 1rem 0;
-  font-weight: 600;
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 280px;
+  margin: 0 auto;
+
+  .flagImg {
+    max-width: 40px;
+  }
+
+  .title {
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: 600;
+  }
 }
 
 .flexContainer {
@@ -25,8 +37,7 @@
   .aboutContainer {
     & > * {
       border: 2px groove hsl(178, 88%, 73%);
-      box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
         rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
       border-radius: 5px;
       margin: 0 auto 3rem;

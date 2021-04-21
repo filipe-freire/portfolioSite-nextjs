@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className={styles.nav}>
       <div className={styles.container}>
         {/* Logo */}
-        <Link href='/'>
+        <Link href="/">
           <a className={`${styles.logo} clrTransition`}>{config.COMPANY_NAME}</a>
         </Link>
 
@@ -27,16 +27,16 @@ const Navbar = () => {
           </div>
           <div className={styles.glassBg}>
             <div className={styles.navLinks}>
-              <Link href='/'>
+              <Link href="/">
                 <a onClick={handleClick}>Home</a>
               </Link>
-              <Link href='/projects'>
+              <Link href="/projects">
                 <a onClick={handleClick}>Projects</a>
               </Link>
-              <Link href='/about'>
+              <Link href="/about">
                 <a onClick={handleClick}>About</a>
               </Link>
-              <Link href='/contact'>
+              <Link href="/contact">
                 <a onClick={handleClick}>Contact</a>
               </Link>
             </div>
@@ -47,22 +47,30 @@ const Navbar = () => {
         <div className={styles.navLinksDesktop}>
           <ul>
             <li>
-              <ActiveLink href='/' activeClassName='active'>
-                <a className={`${styles.navLink} clrTransition`}>Home</a>
-              </ActiveLink>
+              <div className={styles.linkWrapper}>
+                <ActiveLink href="/" activeClassName="active">
+                  <a className={`${styles.navLink} clrTransition`}>Home</a>
+                </ActiveLink>
+              </div>
             </li>
             <li>
-              <ActiveLink href='/projects' activeClassName='active'>
-                <a className={`${styles.navLink} clrTransition`}>Projects</a>
-              </ActiveLink>
+              <div className={styles.linkWrapper}>
+                <ActiveLink href="/projects" activeClassName="active">
+                  <a className={`${styles.navLink} clrTransition`}>Projects</a>
+                </ActiveLink>
+              </div>
             </li>
             <li>
-              <ActiveLink href='/about' activeClassName='active'>
-                <a className={`${styles.navLink} clrTransition`}>About</a>
-              </ActiveLink>
+              <div className={styles.linkWrapper}>
+                <ActiveLink href="/about" activeClassName="active">
+                  <a className={`${styles.navLink} clrTransition`}>About</a>
+                </ActiveLink>
+              </div>
             </li>
             <li>
-              <Link href='/contact'>Contact</Link>
+              <div className={styles.linkWrapper}>
+                <Link href="/contact">Contact</Link>
+              </div>
             </li>
           </ul>
         </div>

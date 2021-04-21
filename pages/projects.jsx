@@ -1,8 +1,8 @@
 import HeadComp from "../components/HeadComp";
-import { motion, AnimatePresence } from "framer-motion";
 import styles from "../styles/Projects.module.scss";
 import { useState } from "react";
 import Image from "next/image";
+import Button from "../components/Button/Button";
 
 const projectsArr = [
   {
@@ -18,7 +18,7 @@ const projectsArr = [
   {
     title: "BandTracker",
     description: [
-      `- Allows the user to search for his favorite bands/artists and
+      `- Allows the user to search for bands/artists and
     check whether they're performing and where. Built using NodeJS,
     ExpressJS, Handlebars and API integrations.`,
     ],
@@ -46,14 +46,11 @@ const projectsArr = [
 
 const Projects = () => {
   const [count, setCount] = useState(0);
-  const [cardPosition, setcardPosition] = useState(250);
 
   function handleClick(e) {
     if (e.currentTarget.id === "btnLeft") {
-      setcardPosition(-250);
       return !count ? setCount(projectsArr.length - 1) : setCount(count - 1);
     } else {
-      setcardPosition(250);
       return count === projectsArr.length - 1
         ? setCount(0)
         : setCount(count + 1);
@@ -63,26 +60,7 @@ const Projects = () => {
   return (
     <>
       <HeadComp title="Projects"></HeadComp>
-      <motion.div
-        key="projects"
-        className={styles.container}
-        initial="hidden"
-        animate="visible"
-        exit={{ opacity: 0 }}
-        variants={{
-          hidden: {
-            scale: 0.8,
-            opacity: 0,
-          },
-          visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-              delay: 0.2,
-            },
-          },
-        }}
-      >
+      <div className={styles.container}>
         <div className={styles.contactLayout}>
           <h1 className={styles.title}>
             My Projects{" "}
@@ -96,7 +74,7 @@ const Projects = () => {
             id="btnLeft"
             onClick={(e) => handleClick(e)}
             className={styles.btn}
-            tabindex="0"
+            tabIndex="0"
             aria-label="Previous Project"
           >
             <Image src="/assets/img/arrow.svg" alt="" width={35} height={35} />
@@ -121,65 +99,57 @@ const Projects = () => {
             id="btnRight"
             onClick={(e) => handleClick(e)}
             className={`${styles.btn} ${styles.right}`}
-            tabindex="0"
+            tabIndex="0"
             aria-label="Next Project"
           >
             <Image src="/assets/img/arrow.svg" alt="" width={35} height={35} />
           </button>
         </div>
-        <AnimatePresence exitBeforeEnter>
-          <motion.div
-            className={styles.projectCard}
-            key={count}
-            initial={{ x: cardPosition, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{
-              opacity: 0,
-              scale: 0.4,
-              transition: { duration: 0.2 },
-            }}
-          >
+
+        <div className={styles.projectCard}>
+          <div>
             <div>
-              <div>
-                <a
-                  href={projectsArr[count].link}
-                  className={styles.link}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <h1 className={styles.projectTitle}>
-                    {projectsArr[count].title}
-                  </h1>
-                </a>
-              </div>
-
-              <div className={styles.projectImg}>
-                <video
-                  autoPlay
-                  muted
-                  className="video"
-                  width="420"
-                  height="240"
-                  controls
-                >
-                  <source
-                    src={projectsArr[count].video}
-                    type="video/webm"
-                  ></source>
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-
-              <h2 className={styles.summary}>Summary</h2>
-              {projectsArr[count].description.map((p, i) => (
-                <p key={i} className={styles.projectInfo}>
-                  {p}
-                </p>
-              ))}
+              <a
+                href={projectsArr[count].link}
+                className={styles.link}
+                target="_blank"
+                rel="noopener"
+              >
+                <h1 className={styles.projectTitle}>
+                  {projectsArr[count].title}
+                </h1>
+              </a>
             </div>
-          </motion.div>
-        </AnimatePresence>
-      </motion.div>
+            <video
+              key={projectsArr[count].title}
+              // autoPlay
+              muted
+              className="video"
+              width="420"
+              height="240"
+              controls
+            >
+              <source src={projectsArr[count].video} type="video/webm"></source>
+              Your browser does not support the video tag.
+            </video>
+
+            <div className={styles.projectImg}></div>
+
+            <h2 className={styles.summary}>Summary</h2>
+            {projectsArr[count].description.map((p, i) => (
+              <p key={i} className={styles.projectInfo}>
+                {p}
+              </p>
+            ))}
+          </div>
+        </div>
+        <Button
+          href={projectsArr[count].link}
+          text="See it live!"
+          blank
+          noOpener
+        />
+      </div>
     </>
   );
 };
