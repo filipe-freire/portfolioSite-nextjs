@@ -2,6 +2,7 @@ import HeadComp from "../components/HeadComp";
 import styles from "../styles/Projects.module.scss";
 import { useState } from "react";
 import Image from "next/image";
+import Button from "../components/Button/Button";
 
 const projectsArr = [
   {
@@ -9,51 +10,50 @@ const projectsArr = [
     description: [
       `- Built using JavaScript Object Oriented Programming architecture and HTML canvas.`,
       `- Developed during Ironhack's Full Stack Web Development 1st module project week.`,
-      `- Winner of the "Most Creative Game" award! 🏆`
+      `- Winner of the "Most Creative Game" award! 🏆`,
     ],
     link: "https://javascriptin.netlify.app/",
-    video: "/assets/videos/javaScriptin-demo.webm"
+    video: "/assets/videos/javaScriptin-demo.webm",
   },
   {
     title: "BandTracker",
     description: [
-      `- Allows the user to search for his favorite bands/artists and
+      `- Allows the user to search for bands/artists and
     check whether they're performing and where. Built using NodeJS,
-    ExpressJS, Handlebars and API integrations.`
+    ExpressJS, Handlebars and API integrations.`,
     ],
     link: "https://bandtrackerapp.herokuapp.com/",
-    video: "/assets/videos/bandtracker-demo.webm"
+    video: "/assets/videos/bandtracker-demo.webm",
   },
   {
     title: "Vanilla Jobs",
     description: [
       `- A Web Develompent job search Single Page Application (SPA) using
-    React and REST API. Built mobile first using SCSS.`
+    React and REST API. Built mobile first using SCSS.`,
     ],
     link: "https://vanilla-jobs.netlify.app/",
-    video: "/assets/videos/vanilla-jobs-demo.webm"
+    video: "/assets/videos/vanilla-jobs-demo.webm",
   },
   {
     title: "IronHack Class Timer",
     description: [
-      `- A timer built with HTML | CSS | JavaScript in order to properly time breaks during Ironhack Remote Bootcamp's!`
+      `- A timer built with HTML | CSS | JavaScript in order to properly time breaks during Ironhack Remote Bootcamp's!`,
     ],
     link: "https://filipe-freire.github.io/ironhack-class-timer/",
-    video: "/assets/videos/ih-timer.webm"
-  }
+    video: "/assets/videos/ih-timer.webm",
+  },
 ];
 
 const Projects = () => {
   const [count, setCount] = useState(0);
-  const [cardPosition, setcardPosition] = useState(250);
 
   function handleClick(e) {
     if (e.currentTarget.id === "btnLeft") {
-      setcardPosition(-250);
       return !count ? setCount(projectsArr.length - 1) : setCount(count - 1);
     } else {
-      setcardPosition(250);
-      return count === projectsArr.length - 1 ? setCount(0) : setCount(count + 1);
+      return count === projectsArr.length - 1
+        ? setCount(0)
+        : setCount(count + 1);
     }
   }
 
@@ -72,7 +72,7 @@ const Projects = () => {
         <div className={styles.flexContainer}>
           <button
             id="btnLeft"
-            onClick={e => handleClick(e)}
+            onClick={(e) => handleClick(e)}
             className={styles.btn}
             tabIndex="0"
             aria-label="Previous Project"
@@ -97,7 +97,7 @@ const Projects = () => {
           ></div>
           <button
             id="btnRight"
-            onClick={e => handleClick(e)}
+            onClick={(e) => handleClick(e)}
             className={`${styles.btn} ${styles.right}`}
             tabIndex="0"
             aria-label="Next Project"
@@ -115,7 +115,9 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener"
               >
-                <h1 className={styles.projectTitle}>{projectsArr[count].title}</h1>
+                <h1 className={styles.projectTitle}>
+                  {projectsArr[count].title}
+                </h1>
               </a>
             </div>
             <video
@@ -141,6 +143,12 @@ const Projects = () => {
             ))}
           </div>
         </div>
+        <Button
+          href={projectsArr[count].link}
+          text="See it live!"
+          blank
+          noOpener
+        />
       </div>
     </>
   );

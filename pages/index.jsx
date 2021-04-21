@@ -12,6 +12,18 @@ export default function Home() {
           name="Description"
           content="My portfolio page on web development. Here you'll find info about me, what I do and a couple of projects I have developed."
         ></meta>
+        <meta property="og:url" content="filipefreire.com" />
+        <meta property="og:type" content="Web Development" />
+        <meta property="og:title" content="Filipe Freire - Web Development" />
+        <meta name="twitter:card" content="summary" />
+        <meta
+          property="og:description"
+          content="Check what I've been up to these days! 👀"
+        />
+        <meta
+          property="og:image"
+          content="https://avatars.githubusercontent.com/u/45498579?v=4"
+        />
       </HeadComp>
       <h1 className="hidden">Filipe Freire - Homepage</h1>
       <div className={styles.intro}>
@@ -43,11 +55,12 @@ export default function Home() {
             <h3 className={styles.cardTitle}>Responsive Web Design</h3>
             <p>
               Implementing web designs which render well on
-              <strong> multiple devices </strong>and screen sizes, assuring their quality{" "}
-              <strong>no matter where they're viewed.</strong> <br />
+              <strong> multiple devices </strong>and screen sizes, assuring
+              their quality <strong>no matter where they're viewed.</strong>{" "}
               <br />
-              Did you know <strong>50% of worldwide internet</strong> usage takes place on{" "}
-              <strong>mobile devices</strong>?
+              <br />
+              Did you know <strong>50% of worldwide internet</strong> usage
+              takes place on <strong>mobile devices</strong>?
               <sup className="reference">
                 <a
                   href="https://www.thinkwithgoogle.com/intl/en-154/marketing-strategies/app-and-mobile/mobile-world/"
@@ -59,14 +72,17 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.card}>
-            <h3 className={styles.cardTitle}>Quality Front-End & Backend code</h3>
+            <h3 className={styles.cardTitle}>
+              Quality Front-End & Backend code
+            </h3>
             <p>
               Managing the prospect of increased demand is no easy task.
               <br />
               <br />
               <strong>Enforcing best practices </strong>
-              regarding data structures, <strong>code readability</strong> and the use of{" "}
-              <strong>relevant frameworks</strong> prevents code debt in the long run.
+              regarding data structures, <strong>code readability</strong> and
+              the use of <strong>relevant frameworks</strong> prevents code debt
+              in the long run.
             </p>
             <br />
             <p>
@@ -86,7 +102,9 @@ export default function Home() {
             <br />
           </div>
           <div className={styles.card}>
-            <h3 className={styles.cardTitle}>Website Performance Optimization</h3>
+            <h3 className={styles.cardTitle}>
+              Website Performance Optimization
+            </h3>
             <p>
               ⌛ Did you know that around <strong>1 in every 2 users </strong>
               leaves a website if it takes more than <strong>3 seconds </strong>
@@ -98,8 +116,9 @@ export default function Home() {
               </sup>{" "}
               <br />
               <br />
-              <strong>Optimizing load times</strong> and overall performance is therefore of utmost
-              importance to <strong>provide the best experience</strong> to users.
+              <strong>Optimizing load times</strong> and overall performance is
+              therefore of utmost importance to{" "}
+              <strong>provide the best experience</strong> to users.
             </p>
             <br />
             <br />
@@ -110,12 +129,18 @@ export default function Home() {
         <p className={styles.subtitleMobile}>Thank you for visiting!</p>
         <div className={styles.flexContainerCta}>
           <div className={styles.img}>
-            <Image src="/assets/img/illustrations/Messaging.svg" alt="" width={300} height={250} />
+            <Image
+              src="/assets/img/illustrations/Messaging.svg"
+              alt=""
+              width={300}
+              height={250}
+            />
           </div>
           <div className={styles.content}>
             <p className={styles.subtitle}>Thank you for visiting!</p>
             <p className={styles.text}>
-              Want to have your very own corner in the internet? Well you're in the right place!
+              Want to have your very own corner in the internet? Well you're in
+              the right place!
             </p>
             <Button href="/contact" text="get in touch!" />
           </div>

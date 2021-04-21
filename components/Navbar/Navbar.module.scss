@@ -108,7 +108,7 @@
         }
       }
 
-      @media (min-width: 710px) {
+      @media (min-width: 780px) {
         display: block !important;
       }
     }
@@ -178,7 +178,8 @@
         letter-spacing: 0.2ch;
         transform: translateX(100%);
         opacity: 0;
-        transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1), opacity 380ms ease-in-out;
+        transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1),
+          opacity 380ms ease-in-out;
 
         & > a {
           padding: 0.6em;
@@ -196,7 +197,7 @@
         }
       }
 
-      @media (min-width: 710px) {
+      @media (min-width: 780px) {
         display: none;
       }
     }
