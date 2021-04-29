@@ -3,7 +3,7 @@ import styles from "../styles/404.module.scss";
 
 const NotFound = () => {
   return (
-    <>
+    <div className={styles.container}>
       <h1 className={styles.title}>
         <span>Error 404</span> - Page Not Found
       </h1>
@@ -24,7 +24,7 @@ const NotFound = () => {
           <img src="./404-img.png" alt="" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
