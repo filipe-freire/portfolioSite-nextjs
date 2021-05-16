@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+.cardRainbow {
+  font-family: "Nunito", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 100;
+  max-width: 320px;
+  padding: 1px;
+  border-radius: 4px;
+  background: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+  .card5 {
+    display: block;
+    position: relative;
+    max-width: 320px;
+    background-color: #1b1e1f;
+    // border-radius: 4px;
+    padding: 25px 20px;
+    margin: 2px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+
+    h3 {
+      color: #f2f8f9;
+      transition: all 0.3s ease-out;
+    }
+    p {
+      color: #eee9c0d0;
+      transition: all 0.3s ease-out;
+    }
+
+    .goCorner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      background-color: #efdd0c;
+      // border-radius: 0 5px 0 30px;
+
+      .goArrow {
+        color: #1b1e1f;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -16px;
+      right: -16px;
+      background: #efdd0c;
+      height: 50px;
+      width: 50px;
+      border-radius: 32px;
+      transform: scale(1);
+      transform-origin: 50% 50%;
+      transition: transform 0.4s ease-out;
+    }
+
+    &:hover::before {
+      transform: scale(25);
+    }
+  }
+
+  .card5:hover {
+    p {
+      color: #2c3233d7;
+    }
+    h3 {
+      transition: all 0.3s ease-out;
+      color: #2c3233;
+    }
+  }
+}
