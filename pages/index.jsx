@@ -45,7 +45,6 @@ export default function Home() {
             My name is <span className={styles.accent}>Filipe</span>, <br />
             I'm a<span className={styles.accent}> Web Developer!</span>
           </p>
-          {/* <p>Welcome to my spot in the Internet!</p> */}
         </div>
       </div>
       <div className={styles.servicesContainer}>
