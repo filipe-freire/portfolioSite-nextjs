@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <HeadComp title="Home">
         <meta
-          name="Description"
-          content="My portfolio page on web development. Here you'll find info about me, what I do and a couple of projects I have developed."
+          name="description"
+          content="Filipe Freire | Portfolio page on web development. Here you'll find info about me, what I do and see some projects I have developed!"
         ></meta>
         <meta property="og:url" content="filipefreire.com" />
         <meta property="og:type" content="Web Development" />
@@ -18,7 +18,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary" />
         <meta
           property="og:description"
-          content="Check what I've been up to these days! 👀"
+          content="Filipe Freire | Portfolio page on web development. Here you'll find info about me, what I do and see some projects I have developed!"
         />
         <meta
           property="og:image"
