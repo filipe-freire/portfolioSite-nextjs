@@ -1,20 +1,16 @@
 import styles from "./Button.module.scss";
 import Link from "next/link";
 
-const Button = ({ href, text, noOpener, blank }) => {
+export default function Button({ href, text, noOpener, blank }) {
   return (
-    <>
-      <Link href={href}>
-        <a
-          className={styles.btn}
-          target={`${(blank && "_blank") || ""}`}
-          rel={`${(noOpener && "noopener") || ""}`}
-        >
-          {text}
-        </a>
-      </Link>
-    </>
+    <Link href={href}>
+      <a
+        className={styles.btn}
+        target={`${(blank && "_blank") || ""}`}
+        rel={`${(noOpener && "noopener") || ""}`}
+      >
+        {text}
+      </a>
+    </Link>
   );
-};
-
-export default Button;
+}

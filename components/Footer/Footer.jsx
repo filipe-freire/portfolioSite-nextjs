@@ -3,16 +3,14 @@ import * as config from "../../config";
 
 import styles from "./Footer.module.scss";
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className={styles.footer}>
       ©{" "}
-      <span className='active clrTransition'>
-        <Link href='/'>{config.COMPANY_NAME}</Link>
+      <span className="active clrTransition">
+        <Link href="/">{config.COMPANY_NAME}</Link>
       </span>{" "}
       | {new Date().getFullYear()}
     </footer>
   );
-};
-
-export default Footer;
+}

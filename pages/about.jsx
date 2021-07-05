@@ -77,13 +77,12 @@ const About = () => {
           <div className={styles.infoContainer}>
             <p className={styles.paragraph}>
               🙋🏻‍♂️ Hey, I'm Filipe, a Web Developer with a background in music & nutrition, passionate
-              about music, javascript, learning new things and improving people's lives through
-              technology.
+              about technology, music, learning and improving people's lives through technology.
             </p>
             <br />
             <p className={styles.paragraph}>
-              👨‍💻 Transitioned into the field of Web Development due to its fast-paced environment
-              and immense learning opportunities.
+              👨‍💻 Chose to pursue the field of Web Development due to its fast-paced environment and
+              immense learning opportunities.
             </p>
           </div>
         </div>
